@@ -54,7 +54,7 @@ const bradQuote = [
 
 function getQuote() {
   function movieSelect() {movie[Math.floor(Math.random() * movie.length)];
-
+const movieReturn = movieSelect => {
   switch (movieSelect) {
     case "Top Gun":
       return topChar;
@@ -65,11 +65,12 @@ function getQuote() {
     case "Fast Times at Ridgemont High":
       return fastChar;
   }
-  console.log(movieSelect)
+  console.log(movieReturn)};
 };
 
  function charSelect(movieSelect) {movieSelect[Math.floor(Math.random() * movieSelect.length)];
-  switch (charSelect) {
+  const charReturn = charSelect => {
+    switch (charSelect) {
     case 'Nick "Goose" Bradshasw':
       return gooseQuote;
     case 'Pete "Maverick" Mitchell':
@@ -87,10 +88,10 @@ function getQuote() {
     case "Brad Hamilton":
       return bradQuote;
   }
-  console.log(charSelect)
-}
+  console.log(charReturn)}
+};
 
-  const quoteSelect = charSelect[Math.floor(Math.random() * charSelect.length)];
+  const quoteSelect = charReturn[Math.floor(Math.random() * charReturn.length)];
 console.log(quoteSelect);
 };
 
