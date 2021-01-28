@@ -28,25 +28,23 @@ function getQuote() {
 
     var movieSelect = math.Floor(math.Random() * array.length);
     
-    switch(moviePick) {
+    switch(movieSelect) {
         case 'Top Gun':
             return topChar
-            break;
         case 'Anchorman':
             return anchorChar
-            break;
         case 'Caddyshack':
             return caddyChar
-            break;
         case 'Fast Times at Ridgemont High':
-            return fastChar
-            break;
+            return fastChar ;
     };
     
-    const charSelect = math.floor(math.Random()* movieReturn.length);
+    const charSelect = math.floor(math.Random()* movieSelect.length);
     
     const quoteSelect = math.Floor(math.Ramdom()* charSelect.length);
     
     console.log(`${charSelect} said "${quoteSelect}" in the movie ${movieSelect}.`)
     
 };
+
+console.log(getQuote)
