@@ -26,9 +26,9 @@ const bradQuote = ["Doesn't anyone f$#%ing knock any more?", "Get off my case, m
 
 function getQuote() {
 
-    var movieSelect = math.Floor(math.Random() * array.length));
+    var movieSelect = math.Floor(math.Random() * array.length);
     
-    const movieReturn = switch(moviePick) {
+    switch(moviePick) {
         case 'Top Gun':
             return topChar
             break;
