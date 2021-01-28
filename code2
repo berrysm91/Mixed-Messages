@@ -1,0 +1,5 @@
+const movie = ['Top Gun', 'Anchorman', 'Caddyshack', 'Fast Times at Ridgemont High'];
+
+const movieSelect = Math.floor(Math.random() * movie.length);
+
+console.log(movieSelect);

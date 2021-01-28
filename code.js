@@ -26,7 +26,7 @@ const bradQuote = ["Doesn't anyone f$#%ing knock any more?", "Get off my case, m
 
 function getQuote() {
 
-    const movieSelect = math.Floor(math.Random() * array.length);
+    const movieSelect = Math.floor(Math.random() * movie.length);
     
     switch(movieSelect) {
         case 'Top Gun':
@@ -39,7 +39,7 @@ function getQuote() {
             return fastChar ;
     };
     
-    const charSelect = math.floor(math.Random()* movieSelect.length);
+    const charSelect = Math.floor(Math.random()* movieSelect.length);
         switch(charSelect) {
             case 'Nick "Goose" Bradshasw':
                 return gooseQuote
@@ -60,7 +60,7 @@ function getQuote() {
         };
     
 
-    const quoteSelect = math.Floor(math.Ramdom()* charSelect.length);
+    const quoteSelect = Math.floor(Math.random()* charSelect.length);
     
     console.log(`${charSelect} said "${quoteSelect}" in the movie ${movieSelect}.`)
     
