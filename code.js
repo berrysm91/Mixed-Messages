@@ -1,6 +1,6 @@
 const movie = ['Top Gun', 'Anchorman', 'Caddyshack', 'Fast Times at Ridgemont High'];
 
-const topGunChar = ['Nick "Goose" Bradshaw', 'Pete "Maverick" Mitchell'];
+const topChar = ['Nick "Goose" Bradshaw', 'Pete "Maverick" Mitchell'];
 
 const anchorChar = ['Ron Burgandy', 'Brian Fantana'];
 
@@ -26,7 +26,7 @@ const bradQuote = ["Doesn't anyone f$#%ing knock any more?", "Get off my case, m
 
 function getQuote() {
 
-    var movieSelect = math.Floor(math.Random() * array.length);
+    const movieSelect = math.Floor(math.Random() * array.length);
     
     switch(movieSelect) {
         case 'Top Gun':
@@ -40,11 +40,30 @@ function getQuote() {
     };
     
     const charSelect = math.floor(math.Random()* movieSelect.length);
+        switch(charSelect) {
+            case 'Nick "Goose" Bradshasw':
+                return gooseQuote
+            case 'Pete "Maverick" Mitchell':
+                return mavQuote
+            case 'Ron Burgandy':
+                return ronQuote
+            case 'Brian Fantana':
+                return brianQuote
+            case 'Carl Spackler':
+                return carlQuote
+            case 'Ty Webb':
+                return tyQuote
+            case 'Jeff Spicoli':
+                return spicoliQuote
+            case 'Brad Hamilton':
+                return bradQuote;
+        };
     
+
     const quoteSelect = math.Floor(math.Ramdom()* charSelect.length);
     
     console.log(`${charSelect} said "${quoteSelect}" in the movie ${movieSelect}.`)
     
 };
 
-console.log(getQuote)
+console.log(getQuote())
